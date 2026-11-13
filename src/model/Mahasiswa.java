@@ -1,6 +1,6 @@
 package model;
 
-public class Mahasiswa <T> {
+public class Mahasiswa <T> extends DataView<T> {
     private String nim;
     private String nama;
     private String email;
@@ -49,23 +49,4 @@ public class Mahasiswa <T> {
     public String toString(){
         return "NIM: " + getNim() + " Nama: " + getNama();
     }
-
-    // protected String getPrimaryKeyValue(T data){
-    //     return null;
-    // }
-
-    // @Override
-    // protected  String[] getFields(){
-    //     return null;
-    // }
-
-    // @Override
-    // protected  T convertValuesToModel(String[] values){
-    //     return null;
-    // }
-
-    // @Override
-    // protected  String[] convertModelToValues(T data){
-    //     return null;
-    // }
 }

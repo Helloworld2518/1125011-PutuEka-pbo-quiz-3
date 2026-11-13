@@ -1,15 +1,18 @@
 package view;
 
+import java.util.*;
 import model.DataView;
 import model.Mahasiswa;
 
 public class MahasiswaDataView <T extends DataView> {
-    private T value;
+    private DataView<Mahasiswa> mahasiswa = new ArrayList<>();
 
-    @Override 
     public void printAll(){
-        for (T rc: records){
+        for (T rc: mahasiswa){
             System.out.println(rc.toString());
         }
     }
+    
+
+
 }
