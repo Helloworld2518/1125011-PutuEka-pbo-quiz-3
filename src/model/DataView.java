@@ -10,21 +10,42 @@ abstract public class DataView<T> {
     }
 
     public void printAll(){
-        for (T rc: records){
-            System.out.println(rc.toString());
+        String[] fields = this.getFields();
+        for (int i = 0; i < this.records.size(); i++){
+            T record = this.records.get(i);
+            String[] values = this.convertModelToValues(record);
+            System.out.println(i + " ");
+
+            for (int j = 0; j < fields.length; j++){
+                System.out.println(fields[i] + " = " + values[j] + " ");
+            }
         }
+        System.out.println();
     }
 
     public void printByPk(String primaryKey){
-        
+        for (T rec: records){
+            if (rec.equals(getPrimaryKeyValue(primaryKey))){
+
+            }
+        }
     }
 
     public void showInsertForm(){
+        String[] fields = this.getFields();
 
+        for (int i = 0; i < fields.length; i++){
+            System.out.println(fields[i] + " ");
+        }
+        this.convertValuesToModel(fields);
     }
 
-    public void showUpdateForm(){
+    public void showUpdateForm(String pk){
+        String[] fields = this.getFields();
+        for (int i = 0; i < fields.length; i++){
+            if (fields[i].get)
 
+        }
     }
 
     public void promptDelete(){
