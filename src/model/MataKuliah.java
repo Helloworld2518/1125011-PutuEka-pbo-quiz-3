@@ -29,6 +29,7 @@ public class MataKuliah {
         return semester;
     }
 
+    @Override 
     public String toString(){
         return "Kode: " + getKode() + " Nama: " + getNama() + " Jumlah: " + getJumlahSks() + " Semester: " + getSemester();
     }

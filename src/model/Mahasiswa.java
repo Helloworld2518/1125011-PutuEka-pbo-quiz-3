@@ -1,6 +1,6 @@
 package model;
 
-public class Mahasiswa <T> extends DataView<T> {
+public class Mahasiswa {
     private String nim;
     private String nama;
     private String email;

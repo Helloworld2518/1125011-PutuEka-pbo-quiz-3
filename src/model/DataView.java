@@ -25,8 +25,8 @@ abstract public class DataView<T> {
 
     public void printByPk(String primaryKey){
         for (T rec: records){
-            if (rec.equals(getPrimaryKeyValue(primaryKey))){
-
+            if (getPrimaryKeyValue(rec).equals(primaryKey)){
+                System.out.println(rec.toString());
             }
         }
     }
@@ -43,12 +43,11 @@ abstract public class DataView<T> {
     public void showUpdateForm(String pk){
         String[] fields = this.getFields();
         for (int i = 0; i < fields.length; i++){
-            if (fields[i].get)
-
+            System.out.println(fields[i] + " ");
         }
     }
 
-    public void promptDelete(){
+    public void promptDelete(String pk){
         
     }
 

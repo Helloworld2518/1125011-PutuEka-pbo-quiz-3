@@ -13,7 +13,7 @@ public class MahasiswaDataView <T extends DataView> {
     public void printAll(){
         String[] fields = this.getFields();
         for (int i = 0; i < this.mahasiswa.size(); i++){
-            T record = this.mahasiswa.get(i);
+            Mahasiswa record = this.mahasiswa.get(i);
             String[] values = this.convertModelToValues(record);
             System.out.println(i + " ");
 
@@ -25,8 +25,8 @@ public class MahasiswaDataView <T extends DataView> {
     }
 
     public void printByPk(String primaryKey){
-        for (T rec: mahasiswa){
-            if (rec.equals(getPrimaryKeyValue(primaryKey))){
+        for (Mahasiswa rec: mahasiswa){
+            if (rec.getNim().equals(primaryKey)){
 
             }
         }
@@ -51,7 +51,7 @@ public class MahasiswaDataView <T extends DataView> {
 
     protected String getPrimaryKeyValue(T data){
        for (T m : mahasiswa) {
-        return m.toString()
+        return mahasiswa.toString();
     }
     return null; 
     }
