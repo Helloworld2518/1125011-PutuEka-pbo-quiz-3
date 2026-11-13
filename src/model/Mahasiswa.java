@@ -1,6 +1,6 @@
 package model;
 
-public class Mahasiswa {
+public class Mahasiswa <T> {
     private String nim;
     private String nama;
     private String email;
@@ -49,4 +49,23 @@ public class Mahasiswa {
     public String toString(){
         return "NIM: " + getNim() + " Nama: " + getNama();
     }
+
+    // protected String getPrimaryKeyValue(T data){
+    //     return null;
+    // }
+
+    // @Override
+    // protected  String[] getFields(){
+    //     return null;
+    // }
+
+    // @Override
+    // protected  T convertValuesToModel(String[] values){
+    //     return null;
+    // }
+
+    // @Override
+    // protected  String[] convertModelToValues(T data){
+    //     return null;
+    // }
 }

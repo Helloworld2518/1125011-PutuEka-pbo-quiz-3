@@ -30,6 +30,6 @@ public class MataKuliah {
     }
 
     public String toString(){
-        return "Kode: " + getKode() + " Nama: " + getNama() + " Jumlah"
+        return "Kode: " + getKode() + " Nama: " + getNama() + " Jumlah: " + getJumlahSks() + " Semester: " + getSemester();
     }
 }
